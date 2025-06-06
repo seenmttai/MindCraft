@@ -1,0 +1,314 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindCraft AI: Building AI Bots and More</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span>MindCraft AI</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#curriculum">Curriculum</a></li>
+                <li><a href="#project">Project</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>MindCraft AI: Building AI Bots and More</h1>
+            <p>Dive into a week-long online bootcamp where AI meets creativity! Learn to build context-aware bots while exploring cutting-edge concepts like LLMs, prompt engineering, and chaining memory.</p>
+            <div class="cta-buttons">
+                <button class="primary-btn register-btn">Register Now</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="poster.jpeg" alt="MindCraft AI Bootcamp Poster" class="poster-image">
+        </div>
+    </section>
+
+    <section id="intro" class="intro">
+        <div class="container">
+            <h2>MindCraft AI: <span class="highlight">AI Bot Creation Protocol</span></h2>
+            <div class="intro-content">
+                <p class="intro-lead">Get hands-on experience with APIs and real-world AI applications, all guided by experts. 🚀 No matter your skill level—this is your chance to level up with AI! Join us from 📅 <strong>8th to 14th June 2025</strong>.</p>
+
+                <div class="powered-by">
+                    <h4>Organised By</h4>
+                    <div class="chapters">
+                        <span class="chapter">VRGD</span>
+                        <span class="chapter">GitHub Club</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>What You'll <span class="highlight">Gain</span></h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Live Sessions</h3>
+                    <p>Engage in interactive live sessions with our expert instructors.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>1-on-1 Interaction</h3>
+                    <p>Get personalized guidance and feedback during the bootcamp.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Session Recordings</h3>
+                    <p>Access recordings of all sessions to learn at your own pace.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificate by GitHub</h3>
+                    <p>Earn a certificate from GitHub to showcase your new skills.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Hands-On Learning</h3>
+                    <p>Apply what you learn immediately through practical exercises and projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="curriculum" class="learning-path">
+        <div class="container">
+            <h2>7-Day <span class="highlight">Curriculum</span></h2>
+            <div class="timeline">
+                <div class="timeline-block">
+                    <h3>Day 1: Intro to AI & Context</h3>
+                    <ul class="timeline-events">
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Learn what an AI model is and how they work</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Understand 'context' in AI and inference processes</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Explore why context matters in multi-turn conversations</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline-block">
+                    <h3>Day 2: Tokens & Context Windows</h3>
+                    <ul class="timeline-events">
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Master tokenization and token limits (4k/8k/128k)</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Learn how AI models process input context</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Understand truncation and response quality impact</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline-block">
+                    <h3>Day 3: Prompt Engineering</h3>
+                    <ul class="timeline-events">
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Explore zero-shot, few-shot, and role-based prompting</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Learn system vs user prompts differences</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline-block">
+                    <h3>Day 4: Chaining & Memory</h3>
+                    <ul class="timeline-events">
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Learn prompt chaining and memory simulation</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Cover embedding-based retrieval and memory persistence</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline-block">
+                    <h3>Day 5: Context Management in APIs</h3>
+                    <ul class="timeline-events">
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Practice with leading AI APIs</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Manage input/output context and multi-turn logic</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline-block">
+                    <h3>Day 6: Build Project</h3>
+                    <ul class="timeline-events">
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Develop a versatile AI bot for university queries</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Add memory capabilities and handle edge cases</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline-block">
+                    <h3>Day 7: Review & Extend</h3>
+                    <ul class="timeline-events">
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Review learning, test bot, and gather feedback</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="event-content">
+                                <div class="event-title">Explore deployment and advanced memory concepts</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="project-section">
+        <div class="container">
+            <h2>Build Awesome <span class="highlight">Projects</span></h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Research Paper Analyzer</h3>
+                    <p>Build a bot that can ingest, summarize, and answer questions about research papers.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Context-Aware FAQ Chatbot</h3>
+                    <p>Develop an intelligent chatbot that answers user queries while remembering conversation history.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Roast Meme Bot</h3>
+                    <p>Create a fun, interactive bot that generates witty roasts or memes based on user input.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="register-btn-sticky">
+        <button class="register-now-btn">Register Now</button>
+    </div>
+
+    <div class="modal" id="registration-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Join MindCraft AI Bootcamp</h2>
+            <div class="registration-closed-message">
+                <i class="fas fa-exclamation-circle"></i>
+                <h3>Registrations are now closed</h3>
+                <p>Thank you for your interest! The registration period has ended.</p>
+            </div>
+            <form id="registration-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="college">College Name</label>
+                    <input type="text" id="college" name="college" required>
+                </div>
+                <div class="form-group">
+                    <label for="year">Year</label>
+                    <select id="year" name="year" required>
+                        <option value="">Select Year</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                        <option value="5th Year">5th Year</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="course">Course/Field of Study</label>
+                    <input type="text" id="course" name="course" required>
+                </div>
+                <div class="form-group section-field" style="display: none;">
+                    <label for="section">Section</label>
+                    <input type="text" id="section" name="section">
+                </div>
+                <input type="hidden" id="referral" name="referral">
+                <button type="submit" class="submit-btn">Submit Registration</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="creator-credit">
+        <a href="https://mananworks.pages.dev" target="_blank">
+            Created by Manan Bhansali <i class="fas fa-heart heart-beat"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
