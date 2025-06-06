@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const SUPABASE_URL = 'https://vekkziumelqjndunkpxj.supabase.co';
-    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZla2t6aXVtZWxxam5kdW5rcHhqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzk2MTE3MzgsImV4cCI6MjA1NTE4NzczOH0.XWPYixmR7C_TOLh0Ai7HFmGU07Sa2ryZxeEqrd4zwGg';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZla2t6aXVtZWxxam5kdW5rcHhqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzk2MTE3MzgsImV4cCI6MjA1NTE4NzczOH0.XWPYixmR7C_TOLh0Ai7HFhGU07Sa2ryZxeEqrd4zwGg';
     const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     const menuToggle = document.querySelector('.menu-toggle');
@@ -86,10 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (error) {
                 showToast('Registration failed. Please try again.', 'error');
             } else {
-                showToast('Registration successful! Welcome to MindCraft AI!', 'success');
+                showToast('Registration successful! Redirecting to WhatsApp group...', 'success');
                 registrationForm.reset();
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
+                setTimeout(() => {
+                    window.location.href = 'https://chat.whatsapp.com/EjHSUJNV29VC8WsAfOYSxq';
+                }, 2000);
             }
         } catch (error) {
             showToast('Registration failed. Please try again.', 'error');
@@ -147,8 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
             { html: 'Follow me on LinkedIn <i class="fab fa-linkedin"></i>', href: 'https://www.linkedin.com/in/manan-bhansali/', target: '_blank' }
         ];
 
-        const displayDuration = 4000; 
-        const fadeDuration = 500; 
         let currentStateIndex = 0;
 
         function switchContent() {
@@ -164,11 +163,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 creatorLink.classList.remove('fading-out');
 
-                setTimeout(switchContent, displayDuration);
+                setTimeout(switchContent, 4000);
 
-            }, fadeDuration);
+            }, 500);
         }
 
-        setTimeout(switchContent, displayDuration);
+        setTimeout(switchContent, 4000);
     }
 });
