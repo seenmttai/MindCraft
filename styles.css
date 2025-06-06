@@ -797,7 +797,7 @@ section {
     font-family: var(--font-mono);
     color: var(--text-color);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, opacity 0.5s ease;
     backdrop-filter: blur(6px);
     border: 1px solid var(--gray-color);
 }
@@ -813,6 +813,10 @@ section {
     color: var(--primary-color);
 }
 
+.creator-credit a.fading-out {
+    opacity: 0;
+}
+
 .heart-beat {
     color: var(--primary-color);
     animation: heartbeat 1.5s infinite;
@@ -826,6 +830,21 @@ section {
     45% { transform: scale(1.2); }
     60% { transform: scale(1); }
     100% { transform: scale(1); }
+}
+
+.creator-credit a .fa-github,
+.creator-credit a .fa-linkedin {
+    color: var(--text-color); 
+    text-shadow: none;
+    animation: none; 
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.creator-credit a:hover .fa-github,
+.creator-credit a:hover .fa-linkedin {
+    color: var(--light-color); 
+    text-shadow: 0 0 6px rgba(var(--secondary-rgb), 0.5);
+    transform: none; 
 }
 
 .toast {

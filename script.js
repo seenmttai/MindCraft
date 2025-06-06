@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const SUPABASE_URL = 'https://vekkziumelqjndunkpxj.supabase.co';
-    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZla2t6aXVtZWxxam5kdW5rcHhqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzk2MTE3MzgsImV4cCI6MjA1NTE4NzczOH0.XWPYixmR7C_TOLh0Ai7HFmGU07Sa2ryZxeEqrd4zwGg';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZla2t6aXVtZWxxam5kdW5rcHhqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzk2MTE3MzgsImV4cCI6MjA1NTE4NzczOH0.XWPYixmR7C_TOLh0Ai7HFhGU07Sa2ryZxeEqrd4zwGg';
     const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     const menuToggle = document.querySelector('.menu-toggle');
@@ -138,4 +138,37 @@ document.addEventListener('DOMContentLoaded', () => {
     registrationForm.querySelectorAll('input, select').forEach(input => {
         input.disabled = false;
     });
+
+    const creatorLink = document.getElementById('creator-link');
+    if (creatorLink) {
+        const states = [
+            { html: 'Created by Manan Bhansali <i class="fas fa-heart heart-beat"></i>', href: 'https://mananworks.pages.dev', target: '_blank' },
+            { html: 'Code on GitHub <i class="fab fa-github"></i>', href: 'https://github.com/seenmttai/MindCraft', target: '_blank' },
+            { html: 'Follow me on LinkedIn <i class="fab fa-linkedin"></i>', href: 'https://www.linkedin.com/in/manan-bhansali/', target: '_blank' }
+        ];
+
+        const displayDuration = 4000; 
+        const fadeDuration = 500; 
+        let currentStateIndex = 0;
+
+        function switchContent() {
+            creatorLink.classList.add('fading-out');
+
+            setTimeout(() => {
+                currentStateIndex = (currentStateIndex + 1) % states.length;
+                const nextState = states[currentStateIndex];
+
+                creatorLink.innerHTML = nextState.html;
+                creatorLink.href = nextState.href;
+                creatorLink.target = nextState.target;
+
+                creatorLink.classList.remove('fading-out');
+
+                setTimeout(switchContent, displayDuration);
+
+            }, fadeDuration);
+        }
+
+        setTimeout(switchContent, displayDuration);
+    }
 });
