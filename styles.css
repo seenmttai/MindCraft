@@ -1194,3 +1194,19 @@ section {
 .whatsapp-join-btn i {
     font-size: 1.2rem;
 }
+
+.timeline-events .day-link,
+.timeline-events .day-resource {
+    display: inline-block;
+    margin-right: 15px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: underline;
+}
+
+.timeline-events .day-link:hover,
+.timeline-events .day-resource:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 6px var(--glow-primary);
+}
